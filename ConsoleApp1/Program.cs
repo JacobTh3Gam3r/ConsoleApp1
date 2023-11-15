@@ -216,9 +216,9 @@ namespace ConsoleApp1
             double c = double.Parse(Console.ReadLine());
 
             double objem = a * b * c;
-            Console.WriteLine("Objem kvádru je: {0} cm", objem);
+            Console.WriteLine("Objem kvádru je: {0} cm^3", objem);
             double povrch = 2 * (a * b + a * c + b * c);
-            Console.WriteLine("Povrch kvádru je: {0} cm", povrch);
+            Console.WriteLine("Povrch kvádru je: {0} cm^2", povrch);
             */
 
 
