@@ -222,6 +222,7 @@ namespace ConsoleApp1
             */
 
             //větvení
+            /*
             Console.Write("zadejte 1. celé číslo (dělenec): ");
             int delenec = int.Parse(Console.ReadLine());
             Console.Write("zadejte 2. celé číslo (dělitel): ");
@@ -239,7 +240,36 @@ namespace ConsoleApp1
                 podil = Math.Round(podil, des_mist);
                 Console.WriteLine("Výsledek dělení je: {0}", podil);
             }
+            */
+            //diagnostika čísla
+            Console.Write("Zadej lib. cele cislo: ");
+            int x = int.Parse(Console.ReadLine());
+            if (x > 0)
+            {
+                Console.WriteLine("Cislo je kladne.");
+            }
+            else if (x < 0)
+            {
+                Console.WriteLine("Cislo je zaporne.");
+            }
+            else
+            {
+                Console.WriteLine("Cislo je nula.");
+            }
+            if (x % 2 == 0)
+            {
+                Console.WriteLine("Cislo je sude.");
+            }
+            else
+            {
+                Console.WriteLine("Cislo je liche.");
+            }
+            int ax = Math.Abs(x);
+            Console.WriteLine("Absolutni hodnota zadaneho cislo je {0}", ax);
 
+            Console.Write("Zadej dalsi cele cislo: ");
+            int y = int.Parse(Console.ReadLine());
+            double proc = (double)x/y;
 
             Console.ReadKey();
 
