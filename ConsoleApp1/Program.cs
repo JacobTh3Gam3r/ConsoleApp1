@@ -240,7 +240,7 @@ namespace ConsoleApp1
                 podil = Math.Round(podil, des_mist);
                 Console.WriteLine("Výsledek dělení je: {0}", podil);
             }
-            */
+            
             //diagnostika čísla
             Console.Write("Zadej lib. cele cislo: ");
             int x = int.Parse(Console.ReadLine());
@@ -270,6 +270,25 @@ namespace ConsoleApp1
             Console.Write("Zadej dalsi cele cislo: ");
             int y = int.Parse(Console.ReadLine());
             double proc = (double)x/y;
+            */
+
+            Console.Write("zadejte 1. celé číslo (dělenec): ");
+            int delenec = int.Parse(Console.ReadLine());
+            Console.Write("zadejte 2. celé číslo (dělitel): ");
+            int delitel = int.Parse(Console.ReadLine());
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            if (delitel == 0)
+            {
+                Console.WriteLine("Nulou dělit nelze.");
+            }
+            else
+            {
+                Console.Write("Zadej počet desetiných míst výsledku: ");
+                int des_mist = int.Parse(Console.ReadLine());
+                double podil = (double)delenec / (double)delitel;
+                podil = Math.Round(podil, des_mist);
+                Console.WriteLine("Výsledek dělení je: {0}", podil);
+            }
 
             Console.ReadKey();
 
