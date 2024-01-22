@@ -277,17 +277,32 @@ namespace ConsoleApp1
             Console.Write("zadejte 2. celé číslo (dělitel): ");
             int delitel = int.Parse(Console.ReadLine());
             Console.ForegroundColor = ConsoleColor.Yellow;
-            if (delitel == 0)
+            if (delitel != 0)
             {
-                Console.WriteLine("Nulou dělit nelze.");
+                Console.WriteLine("Vyberte metodu pro výpočet: \n\ta) klas. dělení \n\tb) celočíselné dělení \n Váš výběr");
+                char vyber = char.Parse(Console.ReadLine());
+                if (vyber == 'a') {
+                    Console.Write("Zadej pocet desetinych mist vysledku: ");
+                    int des_mist = int.Parse(Console.ReadLine());
+                    double podil = (double)delenec / (double)delitel;
+                    podil = Math.Round(podil, des_mist);
+                    Console.WriteLine("Výsledek dělení je: {0}", podil);
+                }
+                else if (vyber == 'b') {
+                    int cel_podil = delenec / delitel;
+                    int zbytek = delenec % delitel;
+                    Console.WriteLine("Celočíselný podíl: {0}, zbytek {1}", cel_podil, zbytek);
+
+                }
+                else
+                {
+                    Console.WriteLine("Chzybně vybráno.\n Program bude ukončen.");
+                }
+                
             }
             else
             {
-                Console.Write("Zadej počet desetiných míst výsledku: ");
-                int des_mist = int.Parse(Console.ReadLine());
-                double podil = (double)delenec / (double)delitel;
-                podil = Math.Round(podil, des_mist);
-                Console.WriteLine("Výsledek dělení je: {0}", podil);
+                Console.WriteLine("Nulou dělit nelze.\nProgram bude ukončen"); 
             }
 
             Console.ReadKey();
