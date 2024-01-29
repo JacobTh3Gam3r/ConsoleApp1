@@ -271,15 +271,14 @@ namespace ConsoleApp1
             int y = int.Parse(Console.ReadLine());
             double proc = (double)x/y;
             */
-
+            /*
             Console.Write("zadejte 1. celé číslo (dělenec): ");
             int delenec = int.Parse(Console.ReadLine());
             Console.Write("zadejte 2. celé číslo (dělitel): ");
             int delitel = int.Parse(Console.ReadLine());
             Console.ForegroundColor = ConsoleColor.Yellow;
-            if (delitel != 0)
-            {
-                Console.WriteLine("Vyberte metodu pro výpočet: \n\ta) klas. dělení \n\tb) celočíselné dělení \n Váš výběr");
+            if (delitel != 0) {
+                Console.WriteLine("Vyberte metodu pro výpočet: \n\ta) klas. dělení \n\tb) celočíselné dělení \nVáš výběr:");
                 char vyber = char.Parse(Console.ReadLine());
                 if (vyber == 'a') {
                     Console.Write("Zadej pocet desetinych mist vysledku: ");
@@ -292,18 +291,34 @@ namespace ConsoleApp1
                     int cel_podil = delenec / delitel;
                     int zbytek = delenec % delitel;
                     Console.WriteLine("Celočíselný podíl: {0}, zbytek {1}", cel_podil, zbytek);
-
                 }
-                else
-                {
-                    Console.WriteLine("Chzybně vybráno.\n Program bude ukončen.");
+                else {
+                    Console.WriteLine("Chybně vybráno.\n Program bude ukončen.");
                 }
-                
             }
-            else
-            {
+            else {
                 Console.WriteLine("Nulou dělit nelze.\nProgram bude ukončen"); 
             }
+            */
+            Random random = new Random();
+            int a = random.Next(0, 201);
+            int b = random.Next(0, 201);
+            int c = random.Next(0, 201);
+            int d = random.Next(0, 201);
+            int e = random.Next(0, 201);
+            int f = random.Next(0, 201);
+            int g = random.Next(0, 201);
+            int h = random.Next(0, 201);
+            int i = random.Next(0, 201);
+            int[] cisla = { a, b, c, d, e, f, g, h, i };
+            Console.WriteLine("a = {0}, b = {1}, c = {2}, d = {0}, e = {1}, f = {2} ,g = {0}, h = {1}, i = {2}", a, b, c, d, e, f, g, h, i);
+            Array.Sort(cisla);
+            Console.WriteLine("Seřazená čísla: " + String.Join(", ",cisla));
+          
+            
+
+
+
 
             Console.ReadKey();
 
