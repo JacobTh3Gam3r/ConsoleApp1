@@ -300,6 +300,7 @@ namespace ConsoleApp1
                 Console.WriteLine("Nulou dělit nelze.\nProgram bude ukončen"); 
             }
             */
+            /*
             Random random = new Random();
             int a = random.Next(0, 201);
             int b = random.Next(0, 201);
@@ -314,10 +315,41 @@ namespace ConsoleApp1
             Console.WriteLine("a = {0}, b = {1}, c = {2}, d = {0}, e = {1}, f = {2} ,g = {0}, h = {1}, i = {2}", a, b, c, d, e, f, g, h, i);
             Array.Sort(cisla);
             Console.WriteLine("Seřazená čísla: " + String.Join(", ",cisla));
-          
+            */
             
-
-
+            //př. 1
+            double ucet = 20000;
+            Console.Write("Zadejte cenu zboží: ");
+            double cena_zbozi = double.Parse(Console.ReadLine());
+            if (cena_zbozi <= ucet)
+            {
+                double rozdil = ucet - cena_zbozi;
+                Console.WriteLine("OK, zustatek: {0}", rozdil);
+            }
+            else
+            {
+                Console.WriteLine("Transakce nebyla provedena!");
+            }
+            //př. 2
+            Console.Write("Zadejte cenu zakázky: ");
+            double cena_zakazky = double.Parse(Console.ReadLine());
+            if (cena_zakazky < 50000)
+            {
+                Console.WriteLine("Nebyla poskytnuta sleva");
+                Console.WriteLine("Cena zakazky je: {0}", cena_zakazky);
+            }
+            else if (cena_zakazky >= 50000 && cena_zakazky < 150000)
+            {
+                double cena_po_sleve = cena_zakazky - 5000;
+                Console.WriteLine("Aplikovana sleva 5000 Kč");
+                Console.WriteLine("Cena zakazky po aplikovani slevy je: {0}", cena_po_sleve);
+            }
+            else
+            {
+                double cena_po_sleve = cena_zakazky * 0.97;
+                Console.WriteLine("Aplikovana sleva 3%");
+                Console.WriteLine("Cena zakazky po aplikovani slevy je: {0}", cena_po_sleve);
+            }
 
 
             Console.ReadKey();
