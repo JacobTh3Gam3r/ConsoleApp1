@@ -351,75 +351,113 @@ namespace ConsoleApp1
                 Console.WriteLine("Cena zakazky po aplikovani slevy je: {0}", cena_po_sleve);
             }
             */
-            Random random = new Random();
-            int x = random.Next(-200, 201);
-            Console.WriteLine("rand cislo: {0}",x);
-            Console.WriteLine("1.");
-            if (x >= -10 && x % 2 == 1)
-            {
-                Console.WriteLine("pravda");
-            }
-            else
-            {
-                Console.WriteLine("nepravda");
-            }
-            Console.WriteLine("2.");
-            if (x >= -10 && x <= 10)
-            {
-                Console.WriteLine("pravda");
-            }
-            else
-            {
-                Console.WriteLine("nepravda");
-            }
-            Console.WriteLine("3.");
-            if (x > -10 && x < 10)
-            {
-                Console.WriteLine("pravda");
-            }
-            else
-            {
-                Console.WriteLine("nepravda");
-            }
-            Console.WriteLine("4.");
-            if (!(x > -10 && x < 10))
-            {
-                Console.WriteLine("pravda");
-            }
-            else
-            {
-                Console.WriteLine("nepravda");
-            }
-            Console.WriteLine("5.");
-            if (x % 2 == 0 || x > 100)
-            {
-                Console.WriteLine("pravda");
-            }
-            else
-            {
-                Console.WriteLine("nepravda");
-            }
-            Console.WriteLine("6.");
-            if (!(x % 2 == 0))
-            {
-                Console.WriteLine("pravda");
-            }
-            else
-            {
-                Console.WriteLine("nepravda");
-            }
-            Console.WriteLine("7.");
-            if (x <= -100 || (x > 100 && x <= 1000))
-            {
-                Console.WriteLine("pravda");
-            }
-            else
-            {
-                Console.WriteLine("nepravda");
-            }
+            /*
+            while (true) {
+                Random random = new Random();
+                int x = random.Next(-200, 201);
+                Console.WriteLine("rand cislo: {0}",x);
+                Console.WriteLine("1.");
+                if (x >= -10 && x % 2 == 1)
+                {
+                    Console.WriteLine("pravda");
+                }
+                else
+                {
+                   Console.WriteLine("nepravda");
+                }
+                    Console.WriteLine("2.");
+                if (x >= -10 && x <= 10)
+                {
+                    Console.WriteLine("pravda");
+                }
+                else
+                {
+                    Console.WriteLine("nepravda");
+                }
+                Console.WriteLine("3.");
+                if (x > -10 && x < 10)
+                {
+                    Console.WriteLine("pravda");
+                }
+                else
+                {
+                    Console.WriteLine("nepravda");
+                }
+                Console.WriteLine("4.");
+                if (!(x > -10 && x < 10))
+                {
+                   Console.WriteLine("pravda");
+                }
+                else
+                {
+                    Console.WriteLine("nepravda");
+                }
+                Console.WriteLine("5.");
+                if (x % 2 == 0 || x > 100)
+                {
+                    Console.WriteLine("pravda");
+                }
+                else
+                {
+                    Console.WriteLine("nepravda");
+                }
+                Console.WriteLine("6.");
+                if (!(x % 2 == 0))
+                {
+                    Console.WriteLine("pravda");
+                }
+                else
+                {
+                   Console.WriteLine("nepravda");
+                }
+                Console.WriteLine("7.");
+                if (x <= -100 || (x > 100 && x <= 1000))
+                {
+                    Console.WriteLine("pravda");
+                }
+                else
+                {
+                    Console.WriteLine("nepravda");
+                }
 
+                Console.ReadKey();
+            }
+            */
+
+
+            //is troujuhelnik true
+            //rovnoramenny, rovnostranny, ruznostranny
+            //pravouhly
+            Console.Write("zadej stranu a:");
+            double a = double.Parse(Console.ReadLine());
+            Console.Write("zadej stranu b:");
+            double b = double.Parse(Console.ReadLine());
+            Console.Write("zadej stranu c:");
+            double c = double.Parse(Console.ReadLine());
+
+            if ((a+b>c) && (a+c>b) && (b+c>a))
+            {
+                Console.WriteLine("jedna se o trojuhelnik");
+                if (a==b && b==c &&          c==a)
+                {
+                    Console.WriteLine("rovnostranny");
+                } else if (a!= b && b!=c && a!=c)
+                {
+                    Console.WriteLine("ruznostranny");
+                } else
+                {
+                    Console.WriteLine("rovnorammeny");
+                }
+                if (a * a + b * b == c * c || b * b + c * c == a * a || c * c + a * a == b * b)
+                {
+                    Console.WriteLine("pravouhly");
+                }
+            }
+            else
+            {
+                Console.WriteLine("neni trojuhelnik");
+            }
             Console.ReadKey();
-
         }
     }
 }
