@@ -424,7 +424,7 @@ namespace ConsoleApp1
             }
             */
 
-
+            /*
             //is troujuhelnik true
             //rovnoramenny, rovnostranny, ruznostranny
             //pravouhly
@@ -457,6 +457,13 @@ namespace ConsoleApp1
             {
                 Console.WriteLine("neni trojuhelnik");
             }
+            */
+
+            for (int i = 0; i < 7; i++)
+            {
+                Console.WriteLine("Pondeli");
+            }
+            
             Console.ReadKey();
         }
     }
