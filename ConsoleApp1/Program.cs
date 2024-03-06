@@ -463,7 +463,45 @@ namespace ConsoleApp1
             {
                 Console.WriteLine("Pondeli");
             }
+            // cisla od 30 do -30 vedle sebe
+
+            for (int i = 30; i > -31; i--)
+            {
+                Console.Write(i +);
+            }
+            Console.WriteLine("\n");
+
+            // od promene z odectete
+
+            int z = 158;
+
+            for (int i = 0; i < 7; i++)
+            {
+                Console.WriteLine(z = z - 9); 
+            }
+
+            // vypiste vedle sebe kolikrat znak ? tolikrat kolikrat zada cislo
+
+            Console.WriteLine("\nZadejte pocet otaznik");
+            int a = int.Parse(Console.ReadLine());
+            for (int i = 0; i < a; i++) 
+            {
+                Console.Write("?\n");
+            }
             
+
+            Random random = new Random();
+            Console.Write("Pocet nahod. cisel: ");
+            int val = int.Parse(Console.ReadLine());
+            for (int i = 0;i < val; i++) 
+            {
+                int gen = random.Next(-20, 21);
+                Console.Write(gen);
+            }
+
+
+
+
             Console.ReadKey();
         }
     }
