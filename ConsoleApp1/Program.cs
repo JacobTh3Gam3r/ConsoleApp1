@@ -457,17 +457,19 @@ namespace ConsoleApp1
             {
                 Console.WriteLine("neni trojuhelnik");
             }
-            */
+            
 
             for (int i = 0; i < 7; i++)
             {
                 Console.WriteLine("Pondeli");
             }
+            */
+
             // cisla od 30 do -30 vedle sebe
 
             for (int i = 30; i > -31; i--)
             {
-                Console.Write(i +);
+                Console.Write(i + ";");
             }
             Console.WriteLine("\n");
 
@@ -482,26 +484,23 @@ namespace ConsoleApp1
 
             // vypiste vedle sebe kolikrat znak ? tolikrat kolikrat zada cislo
 
-            Console.WriteLine("\nZadejte pocet otaznik");
+            Console.Write("\nZadejte pocet otazniku: ");
             int a = int.Parse(Console.ReadLine());
             for (int i = 0; i < a; i++) 
             {
                 Console.Write("?\n");
             }
-            
 
+            
             Random random = new Random();
             Console.Write("Pocet nahod. cisel: ");
             int val = int.Parse(Console.ReadLine());
             for (int i = 0;i < val; i++) 
             {
                 int gen = random.Next(-20, 21);
-                Console.Write(gen);
+                Console.WriteLine(gen);
             }
-
-
-
-
+            
             Console.ReadKey();
         }
     }
