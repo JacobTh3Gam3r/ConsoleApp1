@@ -500,8 +500,45 @@ namespace ConsoleApp1
                 int gen = random.Next(-20, 21);
                 Console.WriteLine(gen);
             }
-            
+
+            Console.Write("Zadej delitele: ");
+            int delitel = int.Parse(Console.ReadLine());
+            for (int i = -300; i <= 300; i++)
+            {
+                if (i % delitel == 0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+
+            Random randome = new Random();
+            int sude = 0;
+            int lich = 0;
+            for (int i = 0; i < 15; i++)
+            {
+                int gen = randome.Next(-30, 31);
+                Console.WriteLine(gen + " ");
+                if (i % 2 == 0)
+                {
+                    sude++;
+                    
+                }
+                else
+                {
+                    lich++;
+                    
+                }
+                
+            }
+            Console.WriteLine("Pocet sudych {0}", sude);
+            Console.WriteLine("Pocet lichych {0}", lich);
+
+
+
             Console.ReadKey();
+
+
+
         }
     }
 }
