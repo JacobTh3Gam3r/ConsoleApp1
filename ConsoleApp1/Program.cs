@@ -464,7 +464,7 @@ namespace ConsoleApp1
                 Console.WriteLine("Pondeli");
             }
             */
-
+            /*
             // cisla od 30 do -30 vedle sebe
 
             for (int i = 30; i > -31; i--)
@@ -532,6 +532,39 @@ namespace ConsoleApp1
             }
             Console.WriteLine("Pocet sudych {0}", sude);
             Console.WriteLine("Pocet lichych {0}", lich);
+
+            */
+            /*
+            Random rnd = new Random();
+            int los;
+            do
+            {
+                los = rnd.Next(-20,21);
+                Console.WriteLine(los);
+            }
+            while (los != 0);
+            
+            Random rnd2 = new Random();
+            int los2 = rnd2.Next(-20,21);
+            while (los2 != 0) 
+            {
+                Console.WriteLine(los2);
+                los2 = rnd2.Next(-20,21);
+                
+            }
+            */
+
+            Console.WriteLine("Zadejte delence: ");
+            int delenec = int.Parse(Console.ReadLine());
+            Console.WriteLine("Zadejte delitele: ");
+            int delitel = int.Parse(Console.ReadLine());
+            int podil = 0;
+            while (delenec >= delitel) 
+            {
+                delenec = delenec - delitel;
+                podil++;
+            }
+            Console.WriteLine("Celociselny podil: {0}", );
 
 
 
