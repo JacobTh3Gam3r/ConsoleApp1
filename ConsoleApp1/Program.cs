@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 
 namespace ConsoleApp1
 {
@@ -552,7 +553,7 @@ namespace ConsoleApp1
                 los2 = rnd2.Next(-20,21);
                 
             }
-            */
+            
 
             Console.WriteLine("Zadejte delence: ");
             int delenec = int.Parse(Console.ReadLine());
@@ -565,7 +566,60 @@ namespace ConsoleApp1
                 podil++;
             }
             Console.WriteLine("Celociselny podil: {0}", );
+            */
+            int x = 60;
+            do
+            {
+                Console.Write(x + ",");
+                x = x - 6;
+            }
+            while (x >= 6);
+            Console.WriteLine();
 
+            int i = 1000;
+            while (i <=10000)
+            {
+                Console.Write(i + ", ");
+                i = i + 1000;
+            }
+            Console.WriteLine();
+
+            Console.Write("Zadej prirozene cislo: ");
+            int cislo = int.Parse(Console.ReadLine());
+            int j = 1;
+            while (j <= cislo)
+            {
+                if (cislo % j ==0)
+                {
+                    Console.Write(j + ",");
+                }
+                j++;
+            }
+            Console.WriteLine();
+
+            do
+            {
+                Console.WriteLine("Zadejte jmeno: ");
+            }
+            while (Console.ReadLine() != "konec");
+
+            Console.WriteLine();
+
+            Random rnd = new Random();
+            int gen = 3;
+            int count_gen = 0;
+            do
+            {
+                int gene = rnd.Next(-150, 151);
+                count_gen++;
+                if (gene % 17 == 0)
+                {
+                    gen--;
+                    Console.Write(gene + " ");
+                }
+            }
+            while (gen != 0);
+            Console.WriteLine("\nPocet pokus mrd: {0}", count_gen);
 
 
             Console.ReadKey();
