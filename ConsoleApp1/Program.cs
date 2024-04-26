@@ -633,7 +633,7 @@ namespace ConsoleApp1
             {
                 Console.WriteLine("{0}. {1}", i,numbers[i]);
             }
-            */
+            
             int[] nasobilka = new int[10];
 
             for (int i = 0; i < nasobilka.Length; i++)
@@ -667,7 +667,52 @@ namespace ConsoleApp1
                     Console.WriteLine(nasobek2);
                 }
             }
+            */
+            double[] pole1 = new double[50];
+            Console.WriteLine("Zadej cislo: ");
+            pole1[0] = double.Parse(Console.ReadLine());
+            Console.WriteLine("---------------------------------");
+            for (int i = 1; i < pole1.Length; i++)
+            {
+                pole1[i] = pole1[i-1] * 2.8;
+            }
+            Console.WriteLine("Prvky pole:");
+            foreach (double cislo in pole1)
+            {
+                Console.WriteLine(cislo);
+            }
+            int poc_na_5 = 0;
+            foreach (double cislo in pole1)
+            {
+                if(cislo.ToString().EndsWith("5"))
+                {
+                    poc_na_5++;
+                }
+            }
+            Console.WriteLine("\nPoc. prvku kocicich na 5: {0}\n",poc_na_5);
 
+            double[] pole2 = new double[poc_na_5];
+            int indexPole2 = 0;
+            foreach (double cislo in pole1)
+            {
+                if (cislo.ToString().EndsWith("5"))
+                {
+                    pole2[indexPole2] = cislo;
+                    indexPole2++;
+                }
+            }
+
+            Console.WriteLine("Prvky pole2:");
+            foreach (double cislo in pole2)
+            {
+                Console.WriteLine(cislo);
+            }
+
+            Console.WriteLine();
+            double testCislo = 0.00000003;
+            Console.WriteLine($"Číslo 0.00000003 zobrazené na konzoli: {testCislo}");
+
+    
             Console.ReadKey();
 
 
