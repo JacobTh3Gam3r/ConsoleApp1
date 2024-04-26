@@ -566,7 +566,7 @@ namespace ConsoleApp1
                 podil++;
             }
             Console.WriteLine("Celociselny podil: {0}", );
-            */
+            
             int x = 60;
             do
             {
@@ -620,7 +620,53 @@ namespace ConsoleApp1
             }
             while (gen != 0);
             Console.WriteLine("\nPocet pokus mrd: {0}", count_gen);
+            
+            Random rand = new Random();
+            int[] numbers = new int[100];
 
+            for (int i = 0; i < numbers.Length; i++)
+            {
+                numbers[i] = rand.Next(-70, 71);
+            }
+
+            for (int i = numbers.Length - 1; i >= 0; i--)
+            {
+                Console.WriteLine("{0}. {1}", i,numbers[i]);
+            }
+            */
+            int[] nasobilka = new int[10];
+
+            for (int i = 0; i < nasobilka.Length; i++)
+            {
+                nasobilka[i] = 7 * (i + 1);
+            }
+
+            
+            foreach (int nasobek in nasobilka)
+            {
+                Console.WriteLine(nasobek);
+            }
+
+            Console.WriteLine("\nVlozene 0\n");
+
+            nasobilka[0] = 0;
+
+            nasobilka[nasobilka.Length - 1] = 0;
+
+            foreach (int nasobek in nasobilka)
+            {
+                Console.WriteLine(nasobek);
+            }
+
+            Console.WriteLine("\nDelitelne 2\n");
+
+            foreach (int nasobek2 in nasobilka)
+            {
+                if (nasobek2 % 2 == 0)
+                {
+                    Console.WriteLine(nasobek2);
+                }
+            }
 
             Console.ReadKey();
 
