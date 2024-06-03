@@ -712,6 +712,11 @@ namespace ConsoleApp1
             double testCislo = 0.00000003;
             Console.WriteLine($"Číslo 0.00000003 zobrazené na konzoli: {testCislo}");
 
+
+
+
+
+
     
             Console.ReadKey();
 
