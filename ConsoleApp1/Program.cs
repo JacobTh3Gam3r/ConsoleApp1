@@ -1,5 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Linq;
+using System.Runtime.Remoting.Channels;
 
 namespace ConsoleApp1
 {
@@ -667,7 +669,7 @@ namespace ConsoleApp1
                     Console.WriteLine(nasobek2);
                 }
             }
-            */
+            
             double[] pole1 = new double[50];
             Console.WriteLine("Zadej cislo: ");
             pole1[0] = double.Parse(Console.ReadLine());
@@ -711,13 +713,99 @@ namespace ConsoleApp1
             Console.WriteLine();
             double testCislo = 0.00000003;
             Console.WriteLine($"Číslo 0.00000003 zobrazené na konzoli: {testCislo}");
+            
+            Random rnd = new Random();
+            int[] hodnoty = int[60];
+            for (int i = 0; i < hodnoty.Length; i++)
+            {
+                hodnoty[i] = rnd.Next(-100, 101);
+            }
+            for(int i = 0; i < hodnoty.Length; i++)
+            {
+                Console.WriteLine(hodnoty[i] + ", ");
+            }
+            Console.WriteLine("Prvni hodnota na indexu {0}: {1}", 0, hodnoty[0]);
+            Console.WriteLine("Posledni hodnota na indexu {0}: {1}", hodnoty.Length-1, hodnoty[hodnoty.Length-1]);
+            int max = hodnoty[0];
+            int min = hodnoty[0];
+            foreach (int num in hodnoty)
+            { 
+                if (num > max)
+                {
+                    max = num;
+                }
+                if (num < min) 
+                {
+                    min = num;
+                }
+            }
+            Console.WriteLine("nejvyssi honota: " + max );
+            Console.WriteLine("nejnizsi hodnota: " + min);
+            int kladna = 0 , zaporne = 0 , nula = 0;
+            foreach (int num in hodnoty)
+            { 
+                if (num > 0)
+                {
+                    kladna++;
+                }
+                else if (num < 0)
+                {
+                    zaporne++;
+                }
+                else 
+                {
+                    nula++;
+                }
+            }
+            Console.WriteLine("Kladnych {0}, zapornych {1}, nul {2}", kladna, zaporne, nula);
+            double prumer = hodnoty.Average();
+            Console.WriteLine("Prumer: " + prumer);
+            int[] hodnoty_abs = int[60];
+            for (int i = 0; i < hodnoty.Length; i++)
+            {
+                hodnoty_abs[i] = Math.Abs(hodnoty[i]);
+            }
+            Console.Write("Abs pole: ");
+            Console.WriteLine(String.Join(", " + hodnoty_abs));
+            */
+
+            string[] stromy = new string[7];
+            stromy[0] = "dub";
+            stromy[1] = "briza";
+            stromy[4] = "topol";
+            stromy[6] = "lipa";
+            foreach (string x in stromy)
+            {
+                Console.WriteLine(x);
+            }
+            Console.WriteLine();
+            Console.WriteLine(stromy[1]);
+            Console.WriteLine();
+
+            double[] desetinna = { 5.27, 18.4, 298.11, 698.2, 14.57 };
+            foreach (double z in desetinna)
+            {
+                Console.Write(z + " ");
+            }
+            Console.WriteLine();
+
+            char[] hlasky = { 'p', 'q', 'r', 's', 't', 'u', 'w' };
+            Console.WriteLine("pocet halsek: " + hlasky.Length);
+            Console.WriteLine(hlasky[4]);
+            Console.WriteLine();
+            int[] cisla = new int[30];
+            Random rand = new Random();
+            for (int i = 0; i < cisla.Length; i++)
+            {
+                cisla[i] = rand.Next(-50, 101);
+            }
+            Console.WriteLine("porvky pole: ");
+            foreach (int c in cisla)
+            {
+                Console.WriteLine(c);
+            }
 
 
-
-
-
-
-    
             Console.ReadKey();
 
 
